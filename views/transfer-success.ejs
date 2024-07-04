@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Successful</title>
+    <link rel="stylesheet" href="/css/transfer-success.css">
+</head>
+
+<body>
+    <h1>Transfer Successful</h1>
+    <div id="transactionBox">
+        <div class="box1">
+            <h2>Sender Details</h2>
+            <% if (sender) { %>
+                <p>Name: <%= sender.name %>
+                </p>
+                <p>ID: <%= sender.id %>
+                </p>
+                <p>Email: <%= sender.email %>
+                </p>
+                <p>Balance before: <%= sender.balance + parseInt(amount) %>
+                </p>
+                <p>Balance after: <%= sender.balance %>
+                </p>
+                <% } else { %>
+                    <p>Sender details not available.</p>
+                    <% } %>
+        </div>
+        <div class="box2">
+            <h2>Receiver Details</h2>
+            <% if (receiver) { %>
+                <p>Name: <%= receiver.name %>
+                </p>
+                <p>ID: <%= receiver.id %>
+                </p>
+                <p>Email: <%= receiver.email %>
+                </p>
+                <p>Balance before: <%= receiver.balance - parseInt(amount) %>
+                </p>
+                <p>Balance after: <%= receiver.balance %>
+                </p>
+                <% } else { %>
+                    <p>Receiver details not available.</p>
+                    <% } %>
+        </div>
+    </div>
+    <a href="/customers">View All Customers</a>
+</body>
+
+</html>

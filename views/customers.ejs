@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Customers</title>
+    <link rel="stylesheet" href="/css/customers.css">
+</head>
+<body>
+    <h1>All Customers</h1>
+    <ul>
+        <% customers.forEach(customer => { %>
+            <li>
+                <%= customer.id %> - <%= customer.name %> 
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    background-color: #e6ffe6;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#transactionBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 125px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box1,
+.box2 {
+    border: 2px solid black;
+    height: 500px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    & h2{
+        text-decoration: underline;
+    }
+}
+
+.box1 {
+    background-color: #B22222;
+}
+
+.box2 {
+    background-color: #8BC34A;
+}
+
+
+
+
+a{
+    margin-left: 45%;
+}
